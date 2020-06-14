@@ -1,3 +1,5 @@
+// This is a file for testing our transfer protocol
+
 #include "common/transfer.hpp"
 
 #include <sys/socket.h>

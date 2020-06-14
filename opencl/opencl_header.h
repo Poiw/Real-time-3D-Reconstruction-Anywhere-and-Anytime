@@ -3,3 +3,5 @@
 #else
 #include <CL/cl.h>
 #endif
+
+// Not yet implemented

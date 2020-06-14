@@ -5,7 +5,6 @@ project(ReconstructionSystem)
 find_package(Threads REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
-find_package(OpenCL REQUIRED)
 find_package(OpenMP REQUIRED)
 find_package(OpenCV REQUIRED)
 
@@ -20,7 +19,6 @@ include_directories(
         ./
         /usr/local/include
         /usr/local/include/opencv4
-        ${OpenCL_INCLUDE_DIR}
 )
 
 link_directories(
@@ -58,14 +56,12 @@ add_executable(server server/reconstructionServer_main.cpp
                       rendering/render.cpp
                       rendering/shader.cpp
                       reconstruction/pointcloud.cpp
-                      reconstruction/reconstruction.cpp
-                      opencl/tool.cpp)
+                      reconstruction/reconstruction.cpp)
 
 
 target_link_libraries(server ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(server ${OpenCV_LIBRARIES})
 target_link_libraries(server ${RENDERING_LIBS})
-target_link_libraries(server ${OpenCL_LIBRARY})
 
 target_link_libraries(client ${OpenCV_LIBRARIES})
 target_link_libraries(client ${CMAKE_THREAD_LIBS_INIT})
