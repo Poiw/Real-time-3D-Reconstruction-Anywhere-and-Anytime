@@ -12,6 +12,7 @@ We implemented a single client to single server real time 3D reconstruction by R
 - OpenGL
 - OpenMP
 - GLEW
+- glfw
 
 
 
@@ -25,7 +26,7 @@ Currently we **only support** the input from the *7-scenes* dataset. You can dow
 
 ### Configure the system
 
-You need to configure the parameters in `client/7scenes_main.cpp` to fit your environment.
+You need to configure the parameters in `client/7scenes_main.cpp` to fit your environment:
 
 `data_path`: the data sequence you want to test. e.g. `<7-scenes-rootdir>/chess/seq-01`
 
@@ -64,7 +65,7 @@ make
 ./build/client
 ````
 
-Please run the server first.
+Please start server process before client process.
 
 ## Acknowledge
 
