@@ -29,11 +29,12 @@ You need to configure the parameters in `client/7scenes_main.cpp` to fit your en
 
 `data_path`: the data sequence you want to test. e.g. `<7-scenes-rootdir>/chess/seq-01`
 
-`RGBDPClient`:   The first parameter indicates the server's IP address, e.g. `"localhost"`. 
+`RGBDPClient`:   
+- The first parameter indicates the server's IP address, e.g. `"localhost"`. 
 
-​							 The forth parameter indicates the number of testing frame, e.g. `1000`. 
+- The forth parameter indicates the number of testing frame, e.g. `1000`. 
 
-​							 The other parameters can maintain default.
+- The other parameters can maintain default.
 
 ### Compile the System
 
